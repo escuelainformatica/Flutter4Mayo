@@ -11,6 +11,7 @@ class MenuLateral extends StatelessWidget {
       children: [
         ElevatedButton(
           onPressed: () {
+            Scaffold.of(context).openEndDrawer();
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => Pagina2()),
@@ -29,6 +30,16 @@ class MenuLateral extends StatelessWidget {
             );
           },
           child: Text("ir a pagina 3"),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        ElevatedButton(
+          onPressed: () {
+            Scaffold.of(context).openEndDrawer();
+            Navigator.pop(context);
+          },
+          child: Text("Volver"),
         ),
       ],
     ));
